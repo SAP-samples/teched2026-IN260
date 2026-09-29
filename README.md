@@ -9,11 +9,13 @@ The [Reuse Tool](https://reuse.software/) must be used for your samples project.
 3. The README.md file (this file):
 Please edit this file as it is the primary description file for your project. You can find some placeholder titles for sections below.
 
-# Session ID - Session Title
+# IN260 - Modernisation and migration to SAP Integration Suite made simple
 
 ## Description
 
-This repository contains the material for the SAP TechEd 2026 session called Session ID - Session Title.  
+This repository contains the material for the SAP TechEd 2026 session called IN260 - Modernisation and migration to SAP Integration Suite made simple.
+
+Perform a hands-on migration of scenarios in the SAP Process Integration offering or SAP Process Orchestration software yourself. Run migration assessment against a legacy landscape to see what converts automatically, use the migration tooling in SAP Integration Suite to migrate the scenarios, then adjust and deploy the resulting integration flows.
 
 ## Overview
 
