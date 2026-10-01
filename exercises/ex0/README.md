@@ -1,3 +1,11 @@
+# Prepare the Migration Exercises
+
+After having finished the assessment of the current SAP Process Orchestration landscape, the next step is the actual migration.
+
+Before running through the migration tool exercises, you first need to run trough the following preparation steps:
+- [Create an integration package](#create-an-integration-package)
+- [Setup Bruno API client](#setup-bruno-api-client)
+
 ## Create an Integration package
 
 As a prerequisite, you first need to create an integration package where the automatically generated integration flows are created. If you have already run through other exercises before, you may have already created an own package. In this case, you can simply reuse the other package and skip the steps below.
