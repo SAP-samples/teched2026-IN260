@@ -1,60 +1,77 @@
-# Containing Files
-
-1. The LICENSE file:
-In most cases, the license for SAP sample projects is `Apache 2.0`.
-
-2. The REUSE.toml file: 
-The [Reuse Tool](https://reuse.software/) must be used for your samples project. You can find the REUSE.toml in the project initial. Please replace the parts inside the single angle quotation marks < > by the specific information for your repository.
-
-3. The README.md file (this file):
-Please edit this file as it is the primary description file for your project. You can find some placeholder titles for sections below.
-
-# IN260 - Modernisation and migration to SAP Integration Suite made simple
+# IN-260 - Migrate Your SAP Process Orchestration Scenarios to SAP Integration Suite
 
 ## Description
 
-This repository contains the material for the SAP TechEd 2026 session called IN260 - Modernisation and migration to SAP Integration Suite made simple.
-
-Perform a hands-on migration of scenarios in the SAP Process Integration offering or SAP Process Orchestration software yourself. Run migration assessment against a legacy landscape to see what converts automatically, use the migration tooling in SAP Integration Suite to migrate the scenarios, then adjust and deploy the resulting integration flows.
+This repository contains the material for the SAP TechEd 2026 session called IN-260 - Migrate Your SAP Process Orchestration Scenarios to SAP Integration Suite.
 
 ## Overview
 
-This session introduces attendees to...
+This session introduces attendees to the migration assessment and migration tooling supporting you in the transformation from SAP Process Orchestration to SAP Integration Suite.
+
+The [Migration Assessment](https://help.sap.com/docs/integration-suite/sap-integration-suite/migration-assessment) capability of SAP Integration Suite lets you evaluate how various integration scenarios might be migrated and allows you to estimate the technical efforts involved in the migration process.
+
+After having finished the assessment of the current SAP Process Orchestration landscape, the next step is the actual migration. The goal of the [Migration Tooling](https://help.sap.com/docs/integration-suite/sap-integration-suite/migration-tooling) is to provide a semi-automated migration where interfaces in the Cloud Integration capability of SAP Integration Suite will be automatically created based on SAP Process Orchestration information, so that ideally 60-70% of technical migration efforts are automated. The migration of scenarios is based on a pattern approach, which means that integration flow templates following a specific pattern are used as skeleton to migrate the content and create the final integration flows.
+
+In this session, we leverage the [Pipeline Concept](https://help.sap.com/docs/migration-guide-po/migration-guide-for-sap-process-orchestration/pipeline-concept) for Cloud Integration, which is supported within the migration tooling. The Pipeline for Cloud Integration allows you to set up your integration scenarios in Cloud Integration similarly to how messages are processed in SAP Process Orchestration — in pipelines. It serves as a framework for handling asynchronous messages with out-of-the-box support for exactly-once delivery, error handling, and sophisticated restart capabilities. For an introduction to the Pipeline for Cloud Integration, check out this [blog post](https://community.sap.com/t5/technology-blog-posts-by-sap/introducing-the-new-pipeline-concept-in-cloud-integration/ba-p/13639651).
 
 ## Requirements
 
-The requirements to follow the exercises in this repository are...
+To follow the exercises in this repository you need access to an SAP Integration Suite tenant. The instructors will provide you with the tenant URL, your user number, and the password during the session.
+
+## Access to SAP Integration Suite Tenant
+
+For running through the exercises, we provide the following SAP Integration Suite tenants. The instructors will let you know which tenant to use.
+
+Tenants in EU:
+- Option 1: [**Workshop tenant eu-02a**](https://workshop-eu-02a.integrationsuite-cpi033.cfapps.eu10-005.hana.ondemand.com/shell/home)
+- Option 2: [**Workshop tenant eu-02b**](https://workshop-eu-02b.integrationsuite-cpi035.cfapps.eu20-001.hana.ondemand.com/shell/home)
+
+Tenants in US:
+- Option 3: [**Workshop tenant us-01b**](https://workshop-us-01b.integrationsuite.cfapps.us20.hana.ondemand.com/shell/home)
+- Option 4: [**Workshop tenant us-01c**](https://workshop-us-01c.integrationsuite.cfapps.us30.hana.ondemand.com/shell/home)
+
+Access:
+- Use the user **userXX** with **XX** from 01 to 45.
+
+**Note**: Please replace **XX** with the ID assigned to you. The ID and the password will be provided by the instructors during the session.
+
+```yaml
+userXX
+```
+
+## Prerequisites
+
+As a prerequisite for the migration tooling exercises, you first need to run through the following preparation steps.
+- [Exercise 0 - Prepare the Migration Exercises](exercises/ex0/)
 
 ## Exercises
 
-Provide the exercise content here directly in README.md using [markdown](https://guides.github.com/features/mastering-markdown/) and linking to the specific exercise pages, below is an example.
+The following list covers all exercise steps. Use this section as an index or table of contents. Use the breadcrumb navigation on top of the pages to go back to the Table of Contents.
 
-- [Getting Started](exercises/ex0/)
-- [Exercise 1 - First Exercise Description](exercises/ex1/)
-    - [Exercise 1.1 - Exercise 1 Sub Exercise 1 Description](exercises/ex1#exercise-11-sub-exercise-1-description)
-    - [Exercise 1.2 - Exercise 1 Sub Exercise 2 Description](exercises/ex1#exercise-12-sub-exercise-2-description)
-- [Exercise 2 - Second Exercise Description](exercises/ex2/)
-    - [Exercise 2.1 - Exercise 2 Sub Exercise 1 Description](exercises/ex2#exercise-21-sub-exercise-1-description)
-    - [Exercise 2.2 - Exercise 2 Sub Exercise 2 Description](exercises/ex2#exercise-22-sub-exercise-2-description)
+If you are interested in how the **Migration Assessment** works, start with the first exercise. Note, this exercise is optional — you can run through the migration tooling exercises independently.
+- [Optional Exercise 1 - Migration Assessment](exercises/ex1/)
 
-  
-**OR** Link to the Tutorial Navigator for example...
+For running through the **Migration Tooling** with a Point-to-Point scenario, continue with Exercise 2.
+- [Exercise 2 - Migrate a Point-to-Point Scenario](exercises/ex2/)
 
-Start the exercises [here](https://developers.sap.com/tutorials/abap-environment-trial-onboarding.html).
+For running through the **Migration Tooling** with a Content-Based Routing scenario, continue with Exercise 3.
+- [Exercise 3 - Migrate a Content-Based Routing Scenario](exercises/ex3/)
 
-**IMPORTANT**
-
-Your repo must contain the .reuse and LICENSES folder and the License section below. DO NOT REMOVE the section or folders/files. Also, remove all unused template assets(images, folders, etc) from the exercises folder. 
+For running through the **Migration Tooling** with a Java Mapping scenario, continue with Exercise 4.
+- [Exercise 4 - Migrate a Java Mapping Scenario](exercises/ex4/)
 
 ## Contributing
+
 Please read the [CONTRIBUTING.md](./CONTRIBUTING.md) to understand the contribution guidelines.
 
 ## Code of Conduct
+
 Please read the [SAP Open Source Code of Conduct](https://github.com/SAP-samples/.github/blob/main/CODE_OF_CONDUCT.md).
 
-## How to obtain support
+## How to Obtain Support
 
 Support for the content in this repository is available during the actual time of the online session for which this content has been designed. Otherwise, you may request support via the [Issues](../../issues) tab.
 
 ## License
-Copyright (20xx-)20xx SAP SE or an SAP affiliate company and <your-project> contributors. Please see our [LICENSE](LICENSE) for copyright and license information. Detailed information including third-party components and their licensing/copyright information is available [via the REUSE tool](https://api.reuse.software/info/github.com/SAP/<your-project>).
+
+Copyright (c) 2026 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSES/Apache-2.0.txt) file.
