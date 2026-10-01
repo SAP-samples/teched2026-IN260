@@ -11,3 +11,8 @@ After completing these steps you will be able to understand what rules the asses
 2. In the SAP Integration Suite landing page, scroll down to **Capabilities**, and select **Create Requests** from the **Assess Migration Scenarios** tile.
 
 <br>![](/exercises/ex1/images/01_01_Assessment_01.png)
+
+   
+3. In the Migration Assessment application, navigate to **Configure > Rules**. Here you can find a list of rules predefined by SAP. Rules are a set of characteristics according to which the application evaluates whether an integration scenario can be migrated and what effort you can expect. As an example, select the rule **ReceiverJDBCDriver**.
+
+**Note:** You can’t add custom rules or edit the standard rules. You can only view the standard rules.
