@@ -45,3 +45,45 @@
   Central Adapter Engine.
 
   <br>![](/exercises/ex3/images/SourceICO/03_00_SourceICO_06.png)
+
+---
+
+## Exercise 3.1 - Run the Migration Wizard
+
+After completing these steps you will have migrated the CBR Async ICO using the Pipeline approach and a set of scenario-specific integration flows will have been created in your integration package.
+
+1. Navigate to **Design > Integrations and APIs** and open your **User XX** integration package. Select **Edit** to switch to edit mode.
+
+<br>![](/exercises/ex3/images/03_01_Migrate_01.png)
+
+2. On the **Artifacts** tab, select **Migrate** from the toolbar to open the Migration Wizard.
+
+<br>![](/exercises/ex3/images/03_01_Migrate_02.png)
+
+3. The **Migrate Process Orchestration Artifacts** dialog opens. On step **1. Process Orchestration System**, open the **Name** dropdown and select **POP**.
+
+<br>![](/exercises/ex3/images/03_01_Migrate_03.png)
+
+4. The system details are populated automatically — **Version: 7.50**, **Integration Directory** address and Location ID, and **ES Repository** address and Location ID. Select **Next Step**.
+
+<br>![](/exercises/ex3/images/03_01_Migrate_04.png)
+
+5. On step **2. Process Orchestration Artifacts**, the **Object Type** is already set to **Integrated Configuration**. Click the browse icon next to the **Name** field to open the scenario selection dialog.
+
+<br>![](/exercises/ex3/images/03_01_Migrate_05.png)
+
+6. The **Select: Scenario** dialog opens listing 78 ICOs. Locate and select **|BC_CBR_XX|si_order_async_ob|http://demo.sap.com/pip/samples||** from the list.
+
+<br>![](/exercises/ex3/images/03_01_Migrate_06.png)
+
+7. The selected ICO name is now shown in the **Name** field. Select **Next Step**.
+
+<br>![](/exercises/ex3/images/03_01_Migrate_07.png)
+
+8. On step **3. Pattern**, open the **Pattern** dropdown. The available patterns are shown — select **Content-Based Routing Asynchronous** (condition based integration pattern where messages are routed to a single receiver).
+
+<br>![](/exercises/ex3/images/03_01_Migrate_08.png)
+
+9. The pattern is set to **Content-Based Routing Asynchronous**. Under **Select Migration Approach**, select **Pipeline** — this approach provides monitoring, operations, built-in and reusable error handling, and the ability to restart message processing. Select **Next Step**.
+
+<br>![](/exercises/ex3/images/03_01_Migrate_09.png)
