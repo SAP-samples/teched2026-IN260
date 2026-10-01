@@ -45,3 +45,20 @@ In this exercise, you will assess your integration data extraction and evaluatio
 5. The **Extraction Log** dialog opens for the selected scenario. It shows the warning details — in this case, the extraction could not identify a *SoftwareComponentVersionID* for the Default Service Interface. Review the log entries and select **Close**.
 
 <br>![](/exercises/ex1/images/01_02_Assessment_05.png)
+
+## Exercise 1.3 - Browse through the Scenario Evaluation Results
+
+In this exercise, you will assess your integration scenarios using the information from the data extraction and evaluation requests. You can
+access and download analysis of your scenario evaluation runs with details specific to your integration scenarios, for example, adapters and an
+overview of the rules used in the evaluation. Further, you can download details about the latest evaluation run in one of two formats
+<b>.xlsx</b> file and <b>.pdf</b> file.
+
+1. Navigate to **Request** and select the **Scenario Evaluation** tile.
+
+<br>![](/exercises/ex1/images/01_03_Assessment_01.png)
+
+2. An existing evaluation request **POP-Eval** is already available (Status: Completed, based on the *POP-Extract* data extraction). Select the
+ **Open Dashboard** icon to access the results of the evaluation.
+
+<br>![](/exercises/ex1/images/01_03_Assessment_02.png)
+
