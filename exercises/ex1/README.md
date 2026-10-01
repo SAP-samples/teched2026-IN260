@@ -62,3 +62,15 @@ overview of the rules used in the evaluation. Further, you can download details 
 
 <br>![](/exercises/ex1/images/01_03_Assessment_02.png)
 
+3. The dashboard shows an analysis of your scenario evaluation run **POP-Eval-Run-1**. The **Overview** tab shows scenarios grouped by
+assessment categories (48 Ready to migrate, 24 Adjustment required, 6 Evaluation required) and by effort estimation (S/M/L/XL t-shirt sizing).
+Scroll down to explore the Modernization Recommendations and adapter statistics.
+
+<br>![](/exercises/ex1/images/01_03_Assessment_03.png)
+
+4. Continue scrolling to see the full **Modernization Recommendations** bar chart broken down by category: Clean Core (3), Integration Style
+(34), Mapping (1), Protocol (50), Security (48). Below that you find charts for **Sender Adapters** (REST: 53, FTP: 7, SOAP: 6, File: 6) and
+**Receiver Adapters** (SFTP: 64, File: 47, HTTP_AAE: 33, SOAP: 11).
+
+<br>![](/exercises/ex1/images/01_03_Assessment_04.png)
+
