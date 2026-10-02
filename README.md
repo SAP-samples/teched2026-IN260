@@ -49,11 +49,12 @@ If you are interested in how the **Migration Assessment** works, start with the 
 For running through the **Migration Tooling** with a Point-to-Point scenario containing a **mapping with function library**, continue with Exercise 2.
 - [Exercise 2 - Migrate a Point-to-Point Scenario](exercises/ex2/)
 
-For running through the **Migration Tooling** with a Content-Based Routing scenario leveraging the **Pipeline for Cloud Integration**, continue with Exercise 3.
-- [Exercise 3 - Migrate a Content-Based Routing Scenario](exercises/ex3/)
+For running through the **Migration Tooling** with a Java Mapping scenario leveraging the **migration agent**, continue with Exercise 3.
+- [Exercise 3 - Migrate a Java Mapping Scenario](exercises/ex3/)
 
-For running through the **Migration Tooling** with a Java Mapping scenario leveraging the **migration agent**, continue with Exercise 4.
-- [Exercise 4 - Migrate a Java Mapping Scenario](exercises/ex4/)
+For running through the **Migration Tooling** with a Content-Based Routing scenario leveraging the **Pipeline for Cloud Integration**, continue with Exercise 4.
+- [Exercise 4 - Migrate a Content-Based Routing Scenario](exercises/ex4/)
+
 
 ## Contributing
 
