@@ -87,3 +87,27 @@ After completing these steps you will have migrated the CBR Async ICO using the 
 9. The pattern is set to **Content-Based Routing Asynchronous**. Under **Select Migration Approach**, select **Pipeline** — this approach provides monitoring, operations, built-in and reusable error handling, and the ability to restart message processing. Select **Next Step**.
 
 <br>![](/exercises/ex3/images/03_01_Migrate_09.png)
+
+10. On step **4. Message Mapping from ESR**, the wizard shows that message mappings and their referenced objects will be imported as local references in the integration flow, while function libraries and imported archive objects will be created as global artifacts. Leave **Enable Reusable Artifacts** unchecked and select **Next Step**.
+
+<br>![](/exercises/ex3/images/03_01_Migrate_10.png)
+
+11. On step **5. Message Mapping Resources**, the wizard identifies **3 dependent resources** for the message mappings from ESR: **mm_order_to_order_sw**, **mm_order_to_order_hw**, and **mm_order_to_order_any** — all with Target Reference Type **Local**, Type **Message Mapping**, and Status **To be created**. Select **Next Step**.
+
+<br>![](/exercises/ex3/images/03_01_Migrate_11.png)
+
+12. On step **6. Scenario**, the **Scenario Details** are pre-populated: **Name** and **ID** are set to **CS_CBR_XX**, the **Description** summarises the migration configuration, and **Runtime Profile** is set to **Cloud Integration**. Under **Sender Details**, **Sender Interface** is **si_order_async_ob** and **Sender Component** is **BC_CBR_XX**. Under **Inbound Processing Integration Flow**, the **JMS Queue Name** is set to **PIPX01**.
+
+<br>![](/exercises/ex3/images/03_01_Migrate_12.png)
+
+13. Replace the placeholder **XX** in **Name**, **ID**, and **Sender Component** with your user number. The **Sender Component** field is now showing your updated value (e.g. **BC_CBR_XX** with your number).
+
+<br>![](/exercises/ex3/images/03_01_Migrate_13.png)
+
+14. Scroll down to review the remaining scenario details. The **Inbound Conversion Integration Flow** shows **Sender Component** **BC_CBR_XX** and **End Point** **/CS_CBR_XX/pip03**. The **Outbound Processing Integration Flow** table lists both receivers: **XYZ201** (interface **si_order_async_ob**) and **XYZ200** (interfaces **si_order_sw_async_ib** and **si_order_hw_async_ib**), each with their XPath conditions and generated endpoints. Select **Review**.
+
+<br>![](/exercises/ex3/images/03_01_Migrate_14.png)
+
+15. Step **7. Review** shows a full summary of all migration settings: **Process Orchestration System** (POP, Version 7.50), **Process Orchestration Artifacts** (Integrated Configuration, ICO name), **Pattern** (Content-Based Routing Asynchronous, Pipeline approach), and **Message Mapping from ESR** (mm_order_to_order_sw, mm_order_to_order_hw, mm_order_to_order_any). Verify all settings and select **Migrate** to start the migration.
+
+<br>![](/exercises/ex3/images/03_01_Migrate_15.png)
