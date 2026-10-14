@@ -153,7 +153,7 @@ After completing these steps you will have reviewed the generated integration fl
 
 <br>![](/exercises/ex4/images/04_03_Result_07.png)
 
-8. Select the SOAP sender channel to inspect it. The **SOAP** channel panel opens at the bottom. The **General** tab shows **Name: CC_SOAP_SND_ATTACHMENT**, **Direction: Sender**, **System: BC_Sender**, **Adapter Type: SOAP**, **Transport Protocol: HTTP**, **Message Protocol: SOAP 1.x**.
+8. Select the SOAP sender channel to inspect it. The **SOAP** channel panel opens at the bottom.
 
 <br>![](/exercises/ex4/images/04_03_Result_08.png)
 
