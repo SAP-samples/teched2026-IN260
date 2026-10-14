@@ -164,7 +164,7 @@ After completing these steps you will have reviewed the generated integration fl
 
 <br>![](/exercises/ex4/images/04_03_Result_11.png)
 
-11. Open **SC_JAVAMapping_XX**. The Script Collection shows **iaReadAttachment** (Groovy Script, 2 KB). The AI-generated script **iaReadAttachment.groovy** implements the `ReadAttachment` class — it reads the SOAP attachment, extracts the content, and wraps it in the same XML output structure as the original Java mapping. The **Problems** panel shows **No data** — the script passed all checks. Verify that the logic matches the original Java mapping behavior shown in the Source ICO Overview.
+11. The Script Collection shows **iaReadAttachment** (Groovy Script, 2 KB). The AI-generated script **iaReadAttachment.groovy** implements the `ReadAttachment` class — it reads the SOAP attachment, extracts the content, and wraps it in the same XML output structure as the original Java mapping. The **Problems** panel shows **No data** — the script passed all checks. Verify that the logic matches the original Java mapping behavior shown in the Source ICO Overview.
 
 <br>![](/exercises/ex4/images/04_03_Result_12.png)
 
