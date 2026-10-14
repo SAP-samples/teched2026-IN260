@@ -161,7 +161,7 @@ After completing these steps you will have reviewed the generated integration fl
 
 <br>![](/exercises/ex4/images/04_03_Result_09.png)
 
-10. Scroll down to the second local subprocess. The **Local Integration Process 2** pool contains the Java Mapping step: **Start → iaReadAttachment → End**, with an **Exception SubProcess** (Error Start → Error End). The **Local Integration Process** panel at the bottom shows **Name: Local Integration Process 2**. This subprocess holds the AI-converted Groovy script.
+10. Scroll down to the second local subprocess. The **Local Integration Process 2** pool contains the Java Mapping. Review it.
 
 <br>![](/exercises/ex4/images/04_03_Result_10.png)
 
