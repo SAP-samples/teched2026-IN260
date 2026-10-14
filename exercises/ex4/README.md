@@ -149,7 +149,7 @@ After completing these steps you will have reviewed the generated integration fl
 
 <br>![](/exercises/ex4/images/04_03_Result_06.png)
 
-7. Scroll out to see the full iFlow including the sender participant. **BC_Sen...** (left) connects via **SOAP** to the **Start** event of the Integration Process. The flow proceeds through **Set Header and Message Type → Local Int Process → Request Reply → Local Int Process → SetReceiver → End**, routing to **BC_Rec...** (top right) via SOAP. The **General** tab at the bottom shows **Name: CS_JAVA_FL_XX** and **ID: CS_JAVA_FL_XX**.
+7. Scroll out to see the full integration flow. You can also use the **Beautify** button on the right to auto-arrange the layout.
 
 <br>![](/exercises/ex4/images/04_03_Result_07.png)
 
