@@ -196,6 +196,21 @@ After completing these steps you will have reviewed the generated integration fl
 
 ## Summary
 
-You've now migrated a Java Mapping scenario from SAP Process Orchestration to SAP Integration Suite. The Migration Tooling identified the Java mapping from the ESR, converted it to a Groovy script using AI, and stored it in the Script Collection artifact **SC_JAVAMapping_XX**. The resulting integration flow **CS_JAVA_FL_XX** uses a Standard migration approach with SOAP sender and receiver adapters.
+In this exercise, we focused specifically on the migration of a Java Mapping scenario from SAP Process Orchestration to SAP Integration Suite. The Migration Tooling identified the Java mapping from the ESR and converted it to a Groovy script using AI, storing it in the Script Collection artifact **SC_JAVAMapping_XX**. The resulting integration flow **CS_JAVA_FL_XX** uses a Standard migration approach with SOAP sender and receiver adapters.
+
+> **Note:** We will not deploy this integration flow as part of this session. The purpose of this exercise was to demonstrate how Java Mappings are handled during migration — specifically the AI-assisted conversion to Groovy scripts.
+
+### Upcoming Enhancements
+
+The Java Mapping migration feature is actively being developed. Future releases will include:
+
+- AI-generated scripts will be visually flagged with an AI symbol for differentiation.
+- Direct migration of Java Mappings containing `.class` files into Groovy scripts will be supported.
+- Improved error handling mechanisms for failed Java mappings for better visibility and transparency.
+- Broader coverage for:
+  - Multiple Java classes with single entry points.
+  - Java classes with external library dependencies.
+  - Migration of custom adapter modules (both sender and receiver) to Groovy scripts.
+  - Integration within standalone script collection artifact editor for added flexibility.
 
 Continue to - [Exercise 5](../ex5/README.md)
