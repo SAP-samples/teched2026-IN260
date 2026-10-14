@@ -160,7 +160,7 @@ After completing these steps you will have reviewed the generated integration fl
 9. Select the **Connection** tab of the sender SOAP channel. The **CONNECTION DETAILS** show **Address: /CS_JAVA_FL_XX**, **Service Definition: Manual**, **Message Exchange Pattern: Request-Reply**, **Authorization: User Role**, **User Role: ESBMessaging.send**. Note the address placeholder **XX** — replace it with your user number before deploying.
 <br>![](/exercises/ex4/images/04_03_Result_10.png)
 
-10. Scroll down to the second local subprocess. The **Local Integration Process 2** pool contains the Java Mapping. Select the **iaReadAttachment** Groovy Script step — the **Groovy Script** panel opens at the bottom showing **Script File: /script/v2/iaReadAttachment.groovy**.
+10. Scroll down to the second local subprocess. The **Local Integration Process 2** pool contains the Java Mapping. Select the **iaReadAttachment** Groovy Script step — the **Groovy Script** panel opens at the bottom showing **Script File: /script/v2/iaReadAttachment.groovy**. Click on the script — a separate browser window opens.
 
 <br>![](/exercises/ex4/images/04_03_Result_11.png)
 
