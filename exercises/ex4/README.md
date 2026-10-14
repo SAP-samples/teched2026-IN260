@@ -126,7 +126,7 @@ Select **Migrate** to start the migration.
 
 After completing these steps you will have reviewed the generated integration flow artifact, the channel mapping, and the migration report for the Java Mapping scenario.
 
-1. The migration completes with a **Success** banner. The **Artifact Details** tab shows one scenario-specific integration flow: **CS_JAVA_FL_XX**. Select **View Artifact** to inspect it, or proceed to the next tab.
+1. The migration completes with a **Success** banner. The **Artifact Details** tab shows one scenario-specific integration flow: **CS_JAVA_FL_XX**. Select **Report** (top-right) to download the migration report PDF, then proceed through the tabs.
 
 <br>![](/exercises/ex4/images/04_03_Result_01.png)
 
@@ -138,13 +138,11 @@ After completing these steps you will have reviewed the generated integration fl
 
 <br>![](/exercises/ex4/images/04_03_Result_03.png)
 
-4. Select **Report** (top-right of the Success dialog) to download the migration report PDF. The report confirms: **Integration Flow Artifact CS_JAVA_FL_XX was successfully created**, System: POP, Version 7.50, Pattern: P2P_SYNC, Migration Approach: Standard, Type: ICO, PO Artifact Name: `|BC_Sender|siSendAttachment|http://demo.sap.com/soap/java||`. The **Channel Mapping Details** table confirms Sender **BC_Sender** (SOAP → SOAP, CC_SOAP_SND_ATTACHMENT) and Receiver **BC_Receiver** (SOAP → SOAP, CC_SOAP_RCV_LOOPBACK).
+4. Now check the report: The report confirms: **Integration Flow Artifact CS_JAVA_FL_XX was successfully created**, System: POP, Version 7.50, Pattern: P2P_SYNC, Migration Approach: Standard, Type: ICO, PO Artifact Name: `|BC_Sender|siSendAttachment|http://demo.sap.com/soap/java||`. The **Channel Mapping Details** table confirms Sender **BC_Sender** (SOAP → SOAP, CC_SOAP_SND_ATTACHMENT) and Receiver **BC_Receiver** (SOAP → SOAP, CC_SOAP_RCV_LOOPBACK).
 
 <br>![](/exercises/ex4/images/04_03_Result_04.png)
 
-5. Close the report. Back in the **User XX** package, the artifact list now shows **CS_JAVA_FL_XX** (Integration Flow, version 1.0.0, Status: Created) and **Migration_JavaMapping** (Script Collection, version 1.0.0, Status: Created) — the AI-generated Groovy script is stored in the script collection. The migration is complete.
-
-5. The **User XX** package now contains **9 artifacts** (Artifacts (9)). The list includes the newly created **CS_JAVA_FL_XX** Integration Flow (Point-to-Point Synchronous, Standard approach) alongside the existing CBR and P2P flows. Also visible: **SC_JAVAMapping_XX** Script Collection (Status: Draft) at the bottom.
+5. Close the report. Back in the **User XX** package, the artifact list now shows **CS_JAVA_FL_XX** (Integration Flow, version 1.0.0, Status: Created) and **Migration_JavaMapping** (Script Collection, version 1.0.0, Status: Created) — the AI-generated Groovy script is stored in the script collection. The **User XX** package now contains **9 artifacts** in total.
 
 <br>![](/exercises/ex4/images/04_03_Result_05.png)
 
