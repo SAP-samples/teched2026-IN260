@@ -145,7 +145,7 @@ After completing these steps you will have reviewed the generated integration fl
 5. Close the report. Back in the **User XX** package, the artifact list now shows **CS_JAVA_FL_XX** (Integration Flow, version 1.0.0, Status: Created) and **Migration_JavaMapping** (Script Collection, version 1.0.0, Status: Created) — the AI-generated Groovy script is stored in the script collection.
 <br>![](/exercises/ex4/images/04_03_Result_05.png)
 
-6. Select **CS_JAVA_FL_XX** to open the integration flow. The iFlow editor opens showing **Deployment Status: Not Deployed**. The **Integration Process** pool contains the steps: **Set Header and Message Type → Local Int Process → Request Reply → Local Int Process → SetReceiver → End**, plus an **Exception SubProcess**. A second pool below shows the local subprocess. Select **Edit** to inspect the flow in detail.
+6. Select **CS_JAVA_FL_XX** to open the integration flow and select **Edit** to inspect the flow in detail.
 
 <br>![](/exercises/ex4/images/04_03_Result_06.png)
 
