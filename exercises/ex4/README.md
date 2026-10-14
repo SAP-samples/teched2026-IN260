@@ -82,11 +82,9 @@ After completing these steps you will have migrated the Java Mapping ICO using t
 
 <br>![](/exercises/ex4/images/04_02_Migrate_04.png)
 
-The **Select: Scenario** dialog opens listing the available ICOs. Locate and select **|BC_Sender|siSendAttachment|http://demo.sap.com/soap/java||** from the list.
+5. The **Select: Scenario** dialog opens listing the available ICOs. Locate and select **|BC_Sender|siSendAttachment|http://demo.sap.com/soap/java||** from the list. The selected ICO name is now shown in the **Name** field. Select **Next Step**.
 
 <br>![](/exercises/ex4/images/04_02_Migrate_05.png)
-
-5. The selected ICO name is now shown in the **Name** field. Select **Next Step**.
 
 6. On step **3. Pattern**, the wizard has auto-detected the pattern as **Point-to-Point Synchronous** — a synchronous point-to-point integration pattern between sender and receiver systems. Under **Select Migration Approach**, only **Standard** is available for this pattern. Select **Next Step**.
 
@@ -108,9 +106,21 @@ The **Select: Scenario** dialog opens listing the available ICOs. Locate and sel
 
 <br>![](/exercises/ex4/images/04_02_Migrate_10.png)
 
-11. On step **7. Scenario Details**, the pre-populated fields show: **Name** and **ID** set to **CS_JAVA_FL_XX**, **Runtime Profile: Cloud Integration**. Under **Inbound Processing**: **Sender Interface: siSendAttachment**, **Sender Component: BC_Sender**. Scroll down to the **Outbound Processing** section: receiver **BC_Receiver** (Communication Component) with interface **siCreateResponse** (namespace `http://demo.sap.com/soap/java`) — no condition. Replace **XX** in the **Name** and **ID** fields with your user number. Select **Review** to proceed.
+11. On step **7. Scenario Details**, the pre-populated fields show: **Name** and **ID** set to **CS_JAVA_FL_XX**, **Runtime Profile: Cloud Integration**. Under **Inbound Processing**: **Sender Interface: siSendAttachment**, **Sender Component: BC_Sender**.
 
 <br>![](/exercises/ex4/images/04_02_Migrate_11.png)
+
+Scroll down to the **Outbound Processing** section: receiver **BC_Receiver** (Communication Component) with interface **siCreateResponse** (namespace `http://demo.sap.com/soap/java`) — no condition. Replace **XX** in the **Name** and **ID** fields with your user number. Select **Review** to proceed.
+
+<br>![](/exercises/ex4/images/04_02_Migrate_12.png)
+
+12. Step **8. Review** shows a full summary: **Process Orchestration System** (POP, Version 7.50), **Process Orchestration Artifacts** (ICO `|BC_Sender|siSendAttachment|http://demo.sap.com/soap/java||`), **Pattern** (Point-to-Point Synchronous, Standard approach), **Message Mapping from ESR** (mmResponse), and **Java Mapping from ESR** — with a note that Java mappings with Import Method **Create** will be converted to Groovy scripts with AI. Verify all settings and select **Migrate**.
+
+<br>![](/exercises/ex4/images/04_02_Migrate_13.png)
+
+13. The migration completes with a **Success** banner. The **Artifact Details** tab shows one scenario-specific integration flow: **CS_JAVA_FL_XX**. Select **View Artifact** to inspect it, or proceed to the next tab.
+
+<br>![](/exercises/ex4/images/04_02_Migrate_14.png)
 
 ---
 
@@ -118,65 +128,55 @@ The **Select: Scenario** dialog opens listing the available ICOs. Locate and sel
 
 After completing these steps you will have reviewed the generated integration flow artifact, the channel mapping, and the migration report for the Java Mapping scenario.
 
-1. Step **8. Review** shows a full summary: **Process Orchestration System** (POP, Version 7.50), **Process Orchestration Artifacts** (ICO `|BC_Sender|siSendAttachment|http://demo.sap.com/soap/java||`), **Pattern** (Point-to-Point Synchronous, Standard approach), **Message Mapping from ESR** (mmResponse), and **Java Mapping from ESR** — with a note that Java mappings with Import Method **Create** will be converted to Groovy scripts with AI. Verify all settings and select **Migrate**.
+1. Select the **Channels and Resources** tab. The table shows the adapter mapping for the integration flow **CS_JAVA_FL_XX**: **Sender BC_Sender** uses SOAP → SOAP (channel **CC_SOAP_SND_ATTACHMENT**); **Receiver BC_Receiver** uses SOAP → SOAP (channel **CC_SOAP_RCV_LOOPBACK**).
 
 <br>![](/exercises/ex4/images/04_03_Result_01.png)
 
-2. The migration completes with a **Success** banner. The **Artifact Details** tab shows one scenario-specific integration flow: **CS_JAVA_FL_XX**. Select **View Artifact** to inspect it, or proceed to the next tab.
+2. Select the **Next Steps** tab. Review the post-migration guidance — in particular: for unsupported Java mappings, create the corresponding Groovy script resource in the Script Collection artifact and implement the mapping manually. Since the AI-generated script was created automatically, proceed to verify it in the next exercise. Select **Close** to dismiss the dialog.
 
 <br>![](/exercises/ex4/images/04_03_Result_02.png)
 
-3. Select the **Channels and Resources** tab. The table shows the adapter mapping for the integration flow **CS_JAVA_FL_XX**: **Sender BC_Sender** uses SOAP → SOAP (channel **CC_SOAP_SND_ATTACHMENT**); **Receiver BC_Receiver** uses SOAP → SOAP (channel **CC_SOAP_RCV_LOOPBACK**).
+3. Select **Report** (top-right of the Success dialog) to download the migration report PDF. The report confirms: **Integration Flow Artifact CS_JAVA_FL_XX was successfully created**, System: POP, Version 7.50, Pattern: P2P_SYNC, Migration Approach: Standard, Type: ICO, PO Artifact Name: `|BC_Sender|siSendAttachment|http://demo.sap.com/soap/java||`. The **Channel Mapping Details** table confirms Sender **BC_Sender** (SOAP → SOAP, CC_SOAP_SND_ATTACHMENT) and Receiver **BC_Receiver** (SOAP → SOAP, CC_SOAP_RCV_LOOPBACK).
 
 <br>![](/exercises/ex4/images/04_03_Result_03.png)
 
-4. Select the **Next Steps** tab. Review the post-migration guidance — in particular: for unsupported Java mappings, create the corresponding Groovy script resource in the Script Collection artifact and implement the mapping manually. Since the AI-generated script was created automatically, proceed to verify it in the next exercise. Select **Close** to dismiss the dialog.
+4. Close the report. Back in the **User XX** package, the artifact list now shows **CS_JAVA_FL_XX** (Integration Flow, version 1.0.0, Status: Created) and **Migration_JavaMapping** (Script Collection, version 1.0.0, Status: Created) — the AI-generated Groovy script is stored in the script collection. The migration is complete.
 
 <br>![](/exercises/ex4/images/04_03_Result_04.png)
 
-5. Select **Report** (top-right of the Success dialog) to download the migration report PDF. The report confirms: **Integration Flow Artifact CS_JAVA_FL_XX was successfully created**, System: POP, Version 7.50, Pattern: P2P_SYNC, Migration Approach: Standard, Type: ICO, PO Artifact Name: `|BC_Sender|siSendAttachment|http://demo.sap.com/soap/java||`. The **Channel Mapping Details** table confirms Sender **BC_Sender** (SOAP → SOAP, CC_SOAP_SND_ATTACHMENT) and Receiver **BC_Receiver** (SOAP → SOAP, CC_SOAP_RCV_LOOPBACK).
+5. The **User XX** package now contains **9 artifacts** (Artifacts (9)). The list includes the newly created **CS_JAVA_FL_XX** Integration Flow (Point-to-Point Synchronous, Standard approach) alongside the existing CBR and P2P flows. Also visible: **SC_JAVAMapping_XX** Script Collection (Status: Draft) at the bottom.
 
 <br>![](/exercises/ex4/images/04_03_Result_05.png)
 
-6. Close the report. Back in the **User XX** package, the artifact list now shows **CS_JAVA_FL_XX** (Integration Flow, version 1.0.0, Status: Created) and **Migration_JavaMapping** (Script Collection, version 1.0.0, Status: Created) — the AI-generated Groovy script is stored in the script collection. The migration is complete.
+6. Select **CS_JAVA_FL_XX** to open the integration flow. The iFlow editor opens showing **Deployment Status: Not Deployed**. The **Integration Process** pool contains the steps: **Set Header and Message Type → Local Int Process → Request Reply → Local Int Process → SetReceiver → End**, plus an **Exception SubProcess**. A second pool below shows the local subprocess. Select **Edit** to inspect the flow in detail.
 
 <br>![](/exercises/ex4/images/04_03_Result_06.png)
 
-7. The **User XX** package now contains **9 artifacts** (Artifacts (9)). The list includes the newly created **CS_JAVA_FL_XX** Integration Flow (Point-to-Point Synchronous, Standard approach) alongside the existing CBR and P2P flows. Also visible: **SC_JAVAMapping_XX** Script Collection (Status: Draft) at the bottom.
+7. Scroll out to see the full iFlow including the sender participant. **BC_Sen...** (left) connects via **SOAP** to the **Start** event of the Integration Process. The flow proceeds through **Set Header and Message Type → Local Int Process → Request Reply → Local Int Process → SetReceiver → End**, routing to **BC_Rec...** (top right) via SOAP. The **General** tab at the bottom shows **Name: CS_JAVA_FL_XX** and **ID: CS_JAVA_FL_XX**.
 
 <br>![](/exercises/ex4/images/04_03_Result_07.png)
 
-8. Select **CS_JAVA_FL_XX** to open the integration flow. The iFlow editor opens showing **Deployment Status: Not Deployed**. The **Integration Process** pool contains the steps: **Set Header and Message Type → Local Int Process → Request Reply → Local Int Process → SetReceiver → End**, plus an **Exception SubProcess**. A second pool below shows the local subprocess. Select **Edit** to inspect the flow in detail.
+8. Select the SOAP sender channel to inspect it. The **SOAP** channel panel opens at the bottom. The **General** tab shows **Name: CC_SOAP_SND_ATTACHMENT**, **Direction: Sender**, **System: BC_Sender**, **Adapter Type: SOAP**, **Transport Protocol: HTTP**, **Message Protocol: SOAP 1.x**.
 
 <br>![](/exercises/ex4/images/04_03_Result_08.png)
 
-9. Scroll out to see the full iFlow including the sender participant. **BC_Sen...** (left) connects via **SOAP** to the **Start** event of the Integration Process. The flow proceeds through **Set Header and Message Type → Local Int Process → Request Reply → Local Int Process → SetReceiver → End**, routing to **BC_Rec...** (top right) via SOAP. The **General** tab at the bottom shows **Name: CS_JAVA_FL_XX** and **ID: CS_JAVA_FL_XX**.
+9. Select the **Connection** tab of the sender SOAP channel. The **CONNECTION DETAILS** show **Address: /CS_JAVA_FL_XX**, **Service Definition: Manual**, **Message Exchange Pattern: Request-Reply**, **Authorization: User Role**, **User Role: ESBMessaging.send**. Note the address placeholder **XX** — replace it with your user number before deploying.
 
 <br>![](/exercises/ex4/images/04_03_Result_09.png)
 
-10. Select the SOAP sender channel to inspect it. The **SOAP** channel panel opens at the bottom. The **General** tab shows **Name: CC_SOAP_SND_ATTACHMENT**, **Direction: Sender**, **System: BC_Sender**, **Adapter Type: SOAP**, **Transport Protocol: HTTP**, **Message Protocol: SOAP 1.x**.
+10. Scroll down to the second local subprocess. The **Local Integration Process 2** pool contains the Java Mapping step: **Start → iaReadAttachment → End**, with an **Exception SubProcess** (Error Start → Error End). The **Local Integration Process** panel at the bottom shows **Name: Local Integration Process 2**. This subprocess holds the AI-converted Groovy script.
 
 <br>![](/exercises/ex4/images/04_03_Result_10.png)
 
-11. Select the **Connection** tab of the sender SOAP channel. The **CONNECTION DETAILS** show **Address: /CS_JAVA_FL_XX**, **Service Definition: Manual**, **Message Exchange Pattern: Request-Reply**, **Authorization: User Role**, **User Role: ESBMessaging.send**. Note the address placeholder **XX** — replace it with your user number before deploying.
+11. Select the **iaReadAttachment** Groovy Script step. The **Groovy Script** panel opens at the bottom. On the **Processing** tab, **Script File** shows `/script/v2/iaReadAttachment.groovy` — a link to the Groovy script in the Script Collection artifact **SC_JAVAMapping_XX** created earlier.
 
 <br>![](/exercises/ex4/images/04_03_Result_11.png)
 
-12. Scroll down to the second local subprocess. The **Local Integration Process 2** pool contains the Java Mapping step: **Start → iaReadAttachment → End**, with an **Exception SubProcess** (Error Start → Error End). The **Local Integration Process** panel at the bottom shows **Name: Local Integration Process 2**. This subprocess holds the AI-converted Groovy script.
+12. Navigate back to the **User XX** package and open **SC_JAVAMapping_XX**. The Script Collection view shows **References (1)** under **Scripts 2.x**: **iaReadAttachment** (Groovy Script, 2 KB). The right panel shows the AI-generated Groovy script **iaReadAttachment.groovy** — the header comment reads `// AI Generated groovy script from the Java Mapping object of PI/PO`. The script implements the `ReadAttachment` class with a `transform(Message message)` method that reads the SOAP attachment using `message.getAttachments()`, extracts content via `DataHandler`, and wraps the result in the same XML output structure as the original Java mapping. The **Problems** panel at the bottom shows **No data** — the script passed all upgrade readiness and general script checks.
 
 <br>![](/exercises/ex4/images/04_03_Result_12.png)
 
-13. Select the **iaReadAttachment** Groovy Script step. The **Groovy Script** panel opens at the bottom. On the **Processing** tab, **Script File** shows `/script/v2/iaReadAttachment.groovy` — a link to the Groovy script in the Script Collection artifact **SC_JAVAMapping_XX** created earlier.
-
-<br>![](/exercises/ex4/images/04_03_Result_13.png)
-
-14. Navigate back to the **User XX** package and open **SC_JAVAMapping_XX**. The Script Collection view shows **References (1)** under **Scripts 2.x**: **iaReadAttachment** (Groovy Script, 2 KB). The right panel shows the AI-generated Groovy script **iaReadAttachment.groovy** — the header comment reads `// AI Generated groovy script from the Java Mapping object of PI/PO`. The script implements the `ReadAttachment` class with a `transform(Message message)` method that reads the SOAP attachment using `message.getAttachments()`, extracts content via `DataHandler`, and wraps the result in the same XML output structure as the original Java mapping. The **Problems** panel at the bottom shows **No data** — the script passed all upgrade readiness and general script checks.
-
-<br>![](/exercises/ex4/images/04_03_Result_14.png)
-
-15. The script is ready for review. Verify that the AI-converted logic matches the original Java mapping behavior shown in the Source ICO Overview. Once satisfied, return to the **CS_JAVA_FL_XX** integration flow and proceed with deployment.
-
-<br>![](/exercises/ex4/images/04_03_Result_15.png)
+13. The script is ready for review. Verify that the AI-converted logic matches the original Java mapping behavior shown in the Source ICO Overview. Once satisfied, return to the **CS_JAVA_FL_XX** integration flow and proceed with deployment.
 
 ---
 
