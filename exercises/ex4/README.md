@@ -106,19 +106,17 @@ After completing these steps you will have migrated the Java Mapping ICO using t
 
 <br>![](/exercises/ex4/images/04_02_Migrate_10.png)
 
-<br>![](/exercises/ex4/images/04_02_Migrate_11.png)
-
 11. On step **7. Scenario Details**, the pre-populated fields show: **Name** and **ID** set to **CS_JAVA_FL_XX**, **Runtime Profile: Cloud Integration**. Under **Inbound Processing**: **Sender Interface: siSendAttachment**, **Sender Component: BC_Sender**.
 
 Scroll down to the **Outbound Processing** section: receiver **BC_Receiver** (Communication Component) with interface **siCreateResponse** (namespace `http://demo.sap.com/soap/java`) — no condition. Replace **XX** in the **Name** and **ID** fields with your user number. Select **Review** to proceed.
 
-<br>![](/exercises/ex4/images/04_02_Migrate_12.png)
+<br>![](/exercises/ex4/images/04_02_Migrate_11.png)
 
 12. Step **8. Review** shows a full summary: **Process Orchestration System** (POP, Version 7.50), **Process Orchestration Artifacts** (ICO `|BC_Sender|siSendAttachment|http://demo.sap.com/soap/java||`), **Pattern** (Point-to-Point Synchronous, Standard approach), **Message Mapping from ESR** (mmResponse), and **Java Mapping from ESR** — with a note that Java mappings with Import Method **Create** will be converted to Groovy scripts with AI. Verify all settings and select **Migrate**.
 
-<br>![](/exercises/ex4/images/04_02_Migrate_13.png)
+<br>![](/exercises/ex4/images/04_02_Migrate_12.png)
 
-<br>![](/exercises/ex4/images/04_02_Migrate_14.png)
+<br>![](/exercises/ex4/images/04_02_Migrate_13.png)
 
 ---
 
