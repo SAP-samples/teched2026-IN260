@@ -78,39 +78,39 @@ After completing these steps you will have migrated the Java Mapping ICO using t
 
 <br>![](/exercises/ex4/images/04_02_Migrate_03.png)
 
-4. On step **2. Process Orchestration Artifacts**, the **Object Type** is set to **Integrated Configuration**. Click the browse icon next to the **Name** field to open the scenario selection dialog, then select **|BC_Sender|siSendAttachment|http://demo.sap.com/soap/java||** from the list. The selected ICO name is now shown in the **Name** field. Select **Next Step**.
+4. On step **2. Process Orchestration Artifacts**, the **Object Type** is set to **Integrated Configuration**. Click the browse icon next to the **Name** field to open the scenario selection dialog.
 
 <br>![](/exercises/ex4/images/04_02_Migrate_04.png)
 
-5. On step **3. Pattern**, the wizard has auto-detected the pattern as **Point-to-Point Synchronous** — a synchronous point-to-point integration pattern between sender and receiver systems. Under **Select Migration Approach**, only **Standard** is available for this pattern. Select **Next Step**.
+The **Select: Scenario** dialog opens listing the available ICOs. Locate and select **|BC_Sender|siSendAttachment|http://demo.sap.com/soap/java||** from the list.
 
 <br>![](/exercises/ex4/images/04_02_Migrate_05.png)
 
-6. On step **4. Message Mapping from ESR**, the wizard shows that message mappings and their referenced objects will be imported as local references in the integration flow, while function libraries and imported archive objects will be created as global artifacts. Leave **Enable Reusable Artifacts** unchecked and select **Next Step**.
+5. The selected ICO name is now shown in the **Name** field. Select **Next Step**.
 
 <br>![](/exercises/ex4/images/04_02_Migrate_06.png)
 
-7. On step **5. Message Mapping Resources**, the wizard identifies **1 dependent resource** with **3 entries**: **mmResponse** (Message Mapping, Local, To be created) and **mtResponse** (WSDL, Local, To be created — listed twice for sender and receiver). Select **Next Step**.
+6. On step **3. Pattern**, the wizard has auto-detected the pattern as **Point-to-Point Synchronous** — a synchronous point-to-point integration pattern between sender and receiver systems. Under **Select Migration Approach**, only **Standard** is available for this pattern. Select **Next Step**.
 
 <br>![](/exercises/ex4/images/04_02_Migrate_07.png)
 
-8. Step **6. Java Mapping from ESR** is a new step specific to Java Mapping scenarios. The wizard has identified **1 Java Mapping**: **iaReadAttachment** from the ESR. The **Import Method** is set to **Create with AI** — the Java source will be converted to a Groovy script using AI. The **Groovy Script** name is pre-filled as **iaReadAttachment**. Click the **Script Collection Artifact** dropdown to select the target script collection.
+7. On step **4. Message Mapping from ESR**, the wizard shows that message mappings and their referenced objects will be imported as local references in the integration flow, while function libraries and imported archive objects will be created as global artifacts. Leave **Enable Reusable Artifacts** unchecked and select **Next Step**.
 
 <br>![](/exercises/ex4/images/04_02_Migrate_08.png)
 
-9. The dropdown shows the available script collections in the package. Select **SC_JAVAMapping_XX** (the script collection you created in Exercise 4.1).
+8. On step **5. Message Mapping Resources**, the wizard identifies **1 dependent resource** with **3 entries**: **mmResponse** (Message Mapping, Local, To be created) and **mtResponse** (WSDL, Local, To be created — listed twice for sender and receiver). Select **Next Step**.
 
 <br>![](/exercises/ex4/images/04_02_Migrate_09.png)
 
-10. The **Script Collection Artifact** is now set to **SC_JAVAMapping_XX** and the **Groovy Script** name remains **iaReadAttachment**. Select **Next Step**.
+9. Step **6. Java Mapping from ESR** is a new step specific to Java Mapping scenarios. The wizard has identified **1 Java Mapping**: **iaReadAttachment** from the ESR. The **Import Method** is set to **Create with AI** — the Java source will be converted to a Groovy script using AI. The **Groovy Script** name is pre-filled as **iaReadAttachment**. Click the **Script Collection Artifact** dropdown to select the target script collection.
 
 <br>![](/exercises/ex4/images/04_02_Migrate_10.png)
 
-11. On step **7. Scenario Details**, the pre-populated fields show: **Name** and **ID** set to **CS_JAVA_FL_XX**, **Runtime Profile: Cloud Integration**. Under **Inbound Processing**: **Sender Interface: siSendAttachment**, **Sender Component: BC_Sender**. Scroll down to review the Outbound Processing section.
+10. The dropdown shows the available script collections in the package. Select **SC_JAVAMapping_XX** (the script collection you created in Exercise 4.1). The **Script Collection Artifact** is now set to **SC_JAVAMapping_XX** and the **Groovy Script** name remains **iaReadAttachment**. Select **Next Step**.
 
 <br>![](/exercises/ex4/images/04_02_Migrate_11.png)
 
-12. The **Outbound Processing** section shows receiver **BC_Receiver** (Communication Component) with interface **siCreateResponse** (namespace `http://demo.sap.com/soap/java`) — no condition. Replace **XX** in the **Name** and **ID** fields with your user number. Select **Review** to proceed.
+11. On step **7. Scenario Details**, the pre-populated fields show: **Name** and **ID** set to **CS_JAVA_FL_XX**, **Runtime Profile: Cloud Integration**. Under **Inbound Processing**: **Sender Interface: siSendAttachment**, **Sender Component: BC_Sender**. Scroll down to the **Outbound Processing** section: receiver **BC_Receiver** (Communication Component) with interface **siCreateResponse** (namespace `http://demo.sap.com/soap/java`) — no condition. Replace **XX** in the **Name** and **ID** fields with your user number. Select **Review** to proceed.
 
 <br>![](/exercises/ex4/images/04_02_Migrate_12.png)
 
