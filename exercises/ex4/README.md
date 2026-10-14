@@ -158,22 +158,16 @@ After completing these steps you will have reviewed the generated integration fl
 <br>![](/exercises/ex4/images/04_03_Result_08.png)
 
 9. Select the **Connection** tab of the sender SOAP channel. The **CONNECTION DETAILS** show **Address: /CS_JAVA_FL_XX**, **Service Definition: Manual**, **Message Exchange Pattern: Request-Reply**, **Authorization: User Role**, **User Role: ESBMessaging.send**. Note the address placeholder **XX** — replace it with your user number before deploying.
-
-<br>![](/exercises/ex4/images/04_03_Result_09.png)
-
-10. Scroll down to the second local subprocess. The **Local Integration Process 2** pool contains the Java Mapping. Review it.
-
 <br>![](/exercises/ex4/images/04_03_Result_10.png)
 
-11. Select the **iaReadAttachment** Groovy Script step. The **Groovy Script** panel opens at the bottom. On the **Processing** tab, **Script File** shows `/script/v2/iaReadAttachment.groovy` — a link to the Groovy script in the Script Collection artifact **SC_JAVAMapping_XX** created earlier.
+10. Scroll down to the second local subprocess. The **Local Integration Process 2** pool contains the Java Mapping. Review it. Select the **iaReadAttachment** Groovy Script step. The **Groovy Script** panel opens at the bottom. On the **Processing** tab, **Script File** shows `/script/v2/iaReadAttachment.groovy` — a link to the Groovy script in the Script Collection artifact **SC_JAVAMapping_XX** created earlier.
 
 <br>![](/exercises/ex4/images/04_03_Result_11.png)
 
-12. Navigate back to the **User XX** package and open **SC_JAVAMapping_XX**. The Script Collection view shows **References (1)** under **Scripts 2.x**: **iaReadAttachment** (Groovy Script, 2 KB). The right panel shows the AI-generated Groovy script **iaReadAttachment.groovy** — the header comment reads `// AI Generated groovy script from the Java Mapping object of PI/PO`. The script implements the `ReadAttachment` class with a `transform(Message message)` method that reads the SOAP attachment using `message.getAttachments()`, extracts content via `DataHandler`, and wraps the result in the same XML output structure as the original Java mapping. The **Problems** panel at the bottom shows **No data** — the script passed all upgrade readiness and general script checks.
+
+12. Open the **SC_JAVAMapping_XX**. The Script Collection view shows **References (1)** under **Scripts 2.x**: **iaReadAttachment** (Groovy Script, 2 KB). The right panel shows the AI-generated Groovy script **iaReadAttachment.groovy** — the header comment reads `// AI Generated groovy script from the Java Mapping object of PI/PO`. The script implements the `ReadAttachment` class with a `transform(Message message)` method that reads the SOAP attachment using `message.getAttachments()`, extracts content via `DataHandler`, and wraps the result in the same XML output structure as the original Java mapping. The **Problems** panel at the bottom shows **No data** — the script passed all upgrade readiness and general script checks. The script is ready for review. Verify that the AI-converted logic matches the original Java mapping behavior shown in the Source ICO Overview. Once satisfied, return to the **CS_JAVA_FL_XX** integration flow and proceed with deployment.
 
 <br>![](/exercises/ex4/images/04_03_Result_12.png)
-
-13. The script is ready for review. Verify that the AI-converted logic matches the original Java mapping behavior shown in the Source ICO Overview. Once satisfied, return to the **CS_JAVA_FL_XX** integration flow and proceed with deployment.
 
 ---
 
