@@ -189,3 +189,4 @@ The Java Mapping migration feature is actively being developed. Future releases 
   - Migration of custom adapter modules (both sender and receiver) to Groovy scripts.
   - Integration within standalone script collection artifact editor for added flexibility.
 
+Go back to - [Main page](../../README.md)
