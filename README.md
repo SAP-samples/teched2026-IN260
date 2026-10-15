@@ -22,11 +22,11 @@ To follow the exercises in this repository you need access to an SAP Integration
 
 We provide the following SAP Integration Suite tenants. The instructors will let you know which tenant to use.
 
-- Option 1: Workshop tenant [**workshop01a**](https://workshop01a.integrationsuite-cpi049.cfapps.eu10-003.hana.ondemand.com/shell/home)
-- Option 2: Workshop tenant [**workshop01b**](https://workshop01b.integrationsuite-cpi050.cfapps.eu20-002.hana.ondemand.com/shell/home)
+- Option 1: Workshop tenant [**workshop01a**](https://url.sap/bu1h7f)
+- Option 2: Workshop tenant [**workshop01b**](https://url.sap/7wucsb)
 
 Access:
-- Use the user **userXX** with **XX** from 01 to 45.
+- Use the user **userXX** with **XX** from 01 to 99.
 
 **Note**: Please replace **XX** with the ID assigned to you. The ID and the password will be provided by the instructors during the session.
 
@@ -44,7 +44,7 @@ As a prerequisite for the migration tooling exercises, you first need to run thr
 The following list covers all exercise steps. Use this section as an index or table of contents. Use the breadcrumb navigation on top of the pages to go back to the Table of Contents. You can run through all the exercises independently.
 
 If you are interested in how the **Migration Assessment** works, start with the first exercise.
-- [Optional Exercise 1 - Migration Assessment](exercises/ex1/)
+- [Exercise 1 - Migration Assessment](exercises/ex1/)
 
 For running through the **Migration Tooling** with a Point-to-Point scenario containing a **mapping with function library**, continue with Exercise 2.
 - [Exercise 2 - Migrate a Point-to-Point Scenario](exercises/ex2/)
