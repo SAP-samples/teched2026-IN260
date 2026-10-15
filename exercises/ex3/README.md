@@ -112,19 +112,19 @@ After completing these steps you will have migrated the CBR Async ICO using the 
 
 <br>![](/exercises/ex3/images/03_01_Migrate_11.png)
 
-12. On step **6. Scenario**, the **Scenario Details** are pre-populated: **Name** and **ID** are set to **CS_CBR_XX**, the **Description** summarises the migration configuration, and **Runtime Profile** is set to **Cloud Integration**. Under **Sender Details**, **Sender Interface** is **si_order_async_ob** and **Sender Component** is **BC_CBR_XX**. Under **Inbound Processing Integration Flow**, the **JMS Queue Name** is set to **PIPX01**.
+16. On step **6. Scenario**, the **Scenario Details** are pre-populated: **Name** and **ID** are set to **CS_CBR_XX**, the **Description** summarises the migration configuration, and **Runtime Profile** is set to **Cloud Integration**. Under **Sender Details**, **Sender Interface** is **si_order_async_ob** and **Sender Component** is **BC_CBR_XX**. Under **Inbound Processing Integration Flow**, the **JMS Queue Name** is set to **PIPX01**.
 
 <br>![](/exercises/ex3/images/03_01_Migrate_12.png)
 
-13. Replace the placeholder **XX** in **Name**, **ID**, and **Sender Component** with your user number. The **Sender Component** field is now showing your updated value (e.g. **BC_CBR_XX** with your number).
+17. Replace the placeholder **XX** in **Name**, **ID**, and **Sender Component** with your user number. The **Sender Component** field is now showing your updated value (e.g. **BC_CBR_XX** with your number).
 
 <br>![](/exercises/ex3/images/03_01_Migrate_13.png)
 
-14. Scroll down to review the remaining scenario details. The **Inbound Conversion Integration Flow** shows **Sender Component** **BC_CBR_XX** and **End Point** **/CS_CBR_XX/pip03**. The **Outbound Processing Integration Flow** table lists both receivers: **XYZ201** (interface **si_order_async_ob**) and **XYZ200** (interfaces **si_order_sw_async_ib** and **si_order_hw_async_ib**), each with their XPath conditions and generated endpoints. Select **Review**.
+18. Scroll down to review the remaining scenario details. The **Inbound Conversion Integration Flow** shows **Sender Component** **BC_CBR_XX** and **End Point** **/CS_CBR_XX/pip03**. The **Outbound Processing Integration Flow** table lists both receivers: **XYZ201** (interface **si_order_async_ob**) and **XYZ200** (interfaces **si_order_sw_async_ib** and **si_order_hw_async_ib**), each with their XPath conditions and generated endpoints. Select **Review**.
 
 <br>![](/exercises/ex3/images/03_01_Migrate_14.png)
 
-15. Step **7. Review** shows a full summary of all migration settings: **Process Orchestration System** (POP, Version 7.50), **Process Orchestration Artifacts** (Integrated Configuration, ICO name), **Pattern** (Content-Based Routing Asynchronous, Pipeline approach), and **Message Mapping from ESR** (mm_order_to_order_sw, mm_order_to_order_hw, mm_order_to_order_any). Verify all settings and select **Migrate** to start the migration.
+19. Step **7. Review** shows a full summary of all migration settings: **Process Orchestration System** (POP, Version 7.50), **Process Orchestration Artifacts** (Integrated Configuration, ICO name), **Pattern** (Content-Based Routing Asynchronous, Pipeline approach), and **Message Mapping from ESR** (mm_order_to_order_sw, mm_order_to_order_hw, mm_order_to_order_any). Verify all settings and select **Migrate** to start the migration.
 
 <br>![](/exercises/ex3/images/03_01_Migrate_15.png)
 
