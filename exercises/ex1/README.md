@@ -156,6 +156,6 @@ Scroll down to explore the Modernization Recommendations and adapter statistics.
   You've now made yourself familiar with the major capabilities of the Migration Assessment tool. You are now all set to migrate an integration
   artifact with the Migration tool.
 
-  Continue to - [Exercise 2 - Migrate and Test a Content-Based-Router Scenario](../ex2/README.md)
+  Continue to - [Exercise 2 - Migrate a Point-to-Point scenario](../ex2/README.md)
 
 
