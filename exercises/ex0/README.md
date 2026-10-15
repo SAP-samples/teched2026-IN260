@@ -64,4 +64,4 @@ As part of the collection, variables have been maintained, that is **host** of t
 
 Now that you have run through the preparation steps, you can start with the actual migration exercise.
 
-Go back to - [Main page](../../README.md)
+Go back to - [Main page](../../README.md#exercises)
