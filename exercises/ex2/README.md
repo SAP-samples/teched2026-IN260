@@ -157,4 +157,4 @@ To test your configuration scenario, we use the Bruno API client application for
 
 You've now successfully migrated and tested your scenario.
 
-Continue to - [Exercise 3 - Migration Agent](../ex3/README.md)
+Continue to - [Exercise 3 - Content-Based-Router using Pipeline approach](../ex3/README.md)
