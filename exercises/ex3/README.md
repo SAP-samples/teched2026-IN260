@@ -88,11 +88,27 @@ After completing these steps you will have migrated the CBR Async ICO using the 
 
 <br>![](/exercises/ex3/images/03_01_Migrate_09.png)
 
-10. On step **4. Message Mapping from ESR**, the wizard shows that message mappings and their referenced objects will be imported as local references in the integration flow, while function libraries and imported archive objects will be created as global artifacts. Leave **Enable Reusable Artifacts** unchecked and select **Next Step**.
+10. On step **4. Message Mapping from ESR**, we like to reuse message mappings that have been already uploaded to Cloud Integration. Leave the flag **Enable Reusable Artifacts** checked and select **Select** to select the integration package where the reusable message mappings reside.
 
 <br>![](/exercises/ex3/images/03_01_Migrate_10.png)
 
-11. On step **5. Message Mapping Resources**, the wizard identifies **3 dependent resources** for the message mappings from ESR: **mm_order_to_order_sw**, **mm_order_to_order_hw**, and **mm_order_to_order_any** — all with Target Reference Type **Local**, Type **Message Mapping**, and Status **To be created**. Select **Next Step**.
+11. In the upcoming **Package Selection** dialog, select the **Migration Hands-on - Solution** package.
+
+<br>![](/exercises/ex3/images/03_01_Migrate_10a.png)
+
+12. For the other two message mappings, select the same package.
+
+<br>![](/exercises/ex3/images/03_01_Migrate_10b.png)
+
+13. Once all packages have been selected, select the reusable message mapping artifact from the drop down menu. Do this for all message mappings.
+
+<br>![](/exercises/ex3/images/03_01_Migrate_10c.png)
+
+14. Once all reusable message mappings have been selected, select **Next Step** to proceed.
+
+<br>![](/exercises/ex3/images/03_01_Migrate_10d.png)
+
+15. On step **5. Message Mapping Resources**, the wizard identifies **3 dependent resources** for the message mappings from ESR: **mm_order_to_order_sw**, **mm_order_to_order_hw**, and **mm_order_to_order_any** — all referring to the beforehand selected reusable artifacts, Type **Message Mapping**, and Status **To be reused**. Select **Next Step**.
 
 <br>![](/exercises/ex3/images/03_01_Migrate_11.png)
 
