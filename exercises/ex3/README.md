@@ -269,3 +269,9 @@ After completing these steps you will have verified all three routing paths of t
 17. Navigate to **Monitor Message Processing** and filter by **Sender: BC_CBR_XX** and **Status: Completed**. The full message log shows **15 messages** covering all three test runs — the complete pipeline execution history for the CBR scenario.
 
 <br>![](/exercises/ex3/images/03_04_Test_17.png)
+
+## Summary
+
+You've now successfully migrated and tested your scenario.
+
+Continue to - [Exercise 4 - Migration agent](../ex4/README.md)
