@@ -64,7 +64,7 @@ After completing these steps you will have created a Script Collection artifact 
 
 ## Exercise 4.2 - Run the Migration Wizard
 
-After completing these steps you will have migrated the Java Mapping ICO using the Standard approach and a new integration flow **CS_JAVA_FL_XX** will have been created in your integration package, with the Java mapping converted to a Groovy script using AI.
+After completing these steps you will have migrated the Java Mapping ICO using the Standard approach and a new integration flow **CS_P2P_Sync_JAVA_XX** will have been created in your integration package, with the Java mapping converted to a Groovy script using AI.
 
 1. Back in the **User XX** package on the **Artifacts** tab, select **Migrate** from the toolbar to open the Migration Wizard.
 
@@ -106,7 +106,7 @@ After completing these steps you will have migrated the Java Mapping ICO using t
 
 <br>![](/exercises/ex4/images/04_02_Migrate_10.png)
 
-11. On step **7. Scenario Details**, the pre-populated fields show: **Name** and **ID** set to **CS_JAVA_FL_XX**, **Runtime Profile: Cloud Integration**. Under **Inbound Processing**: **Sender Interface: siSendAttachment**, **Sender Component: BC_Sender**. Scroll down to review the Outbound Processing section.
+11. On step **7. Scenario Details**, the pre-populated fields show: **Name** and **ID** set to **CS_P2P_Sync_JAVA_XX**, **Runtime Profile: Cloud Integration**. Under **Inbound Processing**: **Sender Interface: siSendAttachment**, **Sender Component: BC_Sender**. Scroll down to review the Outbound Processing section.
 
 <br>![](/exercises/ex4/images/04_02_Migrate_11.png)
 
@@ -126,11 +126,11 @@ Select **Migrate** to start the migration.
 
 After completing these steps you will have reviewed the generated integration flow artifact, the channel mapping, and the migration report for the Java Mapping scenario.
 
-1. The migration completes with a **Success** banner. The **Artifact Details** tab shows one scenario-specific integration flow: **CS_JAVA_FL_XX**. Select **Report** (top-right) to download the migration report PDF, then proceed through the tabs.
+1. The migration completes with a **Success** banner. The **Artifact Details** tab shows one scenario-specific integration flow: **CS_P2P_Sync_JAVA_XX**. Select **Report** (top-right) to download the migration report PDF, then proceed through the tabs.
 
 <br>![](/exercises/ex4/images/04_03_Result_01.png)
 
-2. Select the **Channels and Resources** tab. The table shows the adapter mapping for the integration flow **CS_JAVA_FL_XX**: **Sender BC_Sender** uses SOAP → SOAP (channel **CC_SOAP_SND_ATTACHMENT**); **Receiver BC_Receiver** uses SOAP → SOAP (channel **CC_SOAP_RCV_LOOPBACK**).
+2. Select the **Channels and Resources** tab. The table shows the adapter mapping for the integration flow **CS_P2P_Sync_JAVA_XX**: **Sender BC_Sender** uses SOAP → SOAP (channel **CC_SOAP_SND_ATTACHMENT**); **Receiver BC_Receiver** uses SOAP → SOAP (channel **CC_SOAP_RCV_LOOPBACK**).
 
 <br>![](/exercises/ex4/images/04_03_Result_02.png)
 
@@ -138,33 +138,23 @@ After completing these steps you will have reviewed the generated integration fl
 
 <br>![](/exercises/ex4/images/04_03_Result_03.png)
 
-4. Now check the report: The report confirms: **Integration Flow Artifact CS_JAVA_FL_XX was successfully created**, System: POP, Version 7.50, Pattern: P2P_SYNC, Migration Approach: Standard, Type: ICO, PO Artifact Name: `|BC_Sender|siSendAttachment|http://demo.sap.com/soap/java||`. The **Channel Mapping Details** table confirms Sender **BC_Sender** (SOAP → SOAP, CC_SOAP_SND_ATTACHMENT) and Receiver **BC_Receiver** (SOAP → SOAP, CC_SOAP_RCV_LOOPBACK).
+4. Now check the report: The report confirms: **Integration Flow Artifact CS_P2P_Sync_JAVA_XX was successfully created**, System: POP, Version 7.50, Pattern: P2P_SYNC, Migration Approach: Standard, Type: ICO, PO Artifact Name: `|BC_Sender|siSendAttachment|http://demo.sap.com/soap/java||`. The **Channel Mapping Details** table confirms Sender **BC_Sender** (SOAP → SOAP, CC_SOAP_SND_ATTACHMENT) and Receiver **BC_Receiver** (SOAP → SOAP, CC_SOAP_RCV_LOOPBACK).
 
 <br>![](/exercises/ex4/images/04_03_Result_04.png)
 
-5. Close the report. Back in the **User XX** package, the artifact list now shows **CS_JAVA_FL_XX** (Integration Flow, version 1.0.0, Status: Created) and **Migration_JavaMapping** (Script Collection, version 1.0.0, Status: Created) — the AI-generated Groovy script is stored in the script collection.
+5. Close the report. Back in the **User XX** package, the artifact list now shows **CS_P2P_Sync_JAVA_XX** (Integration Flow, version 1.0.0, Status: Created) and **Migration_JavaMapping** (Script Collection, version 1.0.0, Status: Created) — the AI-generated Groovy script is stored in the script collection. Select **CS_P2P_Sync_JAVA_XX** to open the integration flow.
+
 <br>![](/exercises/ex4/images/04_03_Result_05.png)
 
-6. Select **CS_JAVA_FL_XX** to open the integration flow and select **Edit** to inspect the flow in detail.
+6. Scroll down to the local subprocess. The **Local Integration Process 2** pool contains the Java Mapping. Select the **iaReadAttachment** Groovy Script step.
 
 <br>![](/exercises/ex4/images/04_03_Result_06.png)
 
-7. Scroll out to see the full integration flow. You can also use the **Beautify** button on the right to auto-arrange the layout.
-
-<br>![](/exercises/ex4/images/04_03_Result_07.png)
-
-8. Select the SOAP sender channel to inspect it. The **SOAP** channel panel opens at the bottom.
-
-<br>![](/exercises/ex4/images/04_03_Result_08.png)
-
-9. Select the **Connection** tab of the sender SOAP channel. The **CONNECTION DETAILS** show **Address: /CS_JAVA_FL_XX**, **Service Definition: Manual**, **Message Exchange Pattern: Request-Reply**, **Authorization: User Role**, **User Role: ESBMessaging.send**. Note the address placeholder **XX** — replace it with your user number before deploying.
-<br>![](/exercises/ex4/images/04_03_Result_10.png)
-
-10. Scroll down to the second local subprocess. The **Local Integration Process 2** pool contains the Java Mapping. Select the **iaReadAttachment** Groovy Script step — the **Groovy Script** panel opens at the bottom showing **Script File: /script/v2/iaReadAttachment.groovy**. Click on the script — a separate browser window opens.
+7. The **Groovy Script** panel opens at the bottom showing **Script File: /script/v2/iaReadAttachment.groovy**. Click on the script.
 
 <br>![](/exercises/ex4/images/04_03_Result_11.png)
 
-11. The Script Collection shows **iaReadAttachment** (Groovy Script, 2 KB). The AI-generated script **iaReadAttachment.groovy** implements the `ReadAttachment` class — it reads the SOAP attachment, extracts the content, and wraps it in the same XML output structure as the original Java mapping. The **Problems** panel shows **No data** — the script passed all checks. Verify that the logic matches the original Java mapping behavior shown in the Source ICO Overview.
+8. A separate browser window opens. The Script Collection shows **iaReadAttachment** (Groovy Script, 2 KB). The AI-generated script **iaReadAttachment.groovy** implements the `ReadAttachment` class — it reads the SOAP attachment, extracts the content, and wraps it in the same XML output structure as the original Java mapping. The **Problems** panel shows **No data** — the script passed all checks. Verify that the logic matches the original Java mapping behavior shown in the Source ICO Overview.
 
 <br>![](/exercises/ex4/images/04_03_Result_12.png)
 
@@ -172,7 +162,7 @@ After completing these steps you will have reviewed the generated integration fl
 
 ## Summary
 
-In this exercise, we focused specifically on the migration of a Java Mapping scenario from SAP Process Orchestration to SAP Integration Suite. The Migration Tooling identified the Java mapping from the ESR and converted it to a Groovy script using AI, storing it in the Script Collection artifact **SC_JAVAMapping_XX**. The resulting integration flow **CS_JAVA_FL_XX** uses a Standard migration approach with SOAP sender and receiver adapters.
+In this exercise, we focused specifically on the migration of a Java Mapping scenario from SAP Process Orchestration to SAP Integration Suite. The Migration Tooling identified the Java mapping from the ESR and converted it to a Groovy script using AI, storing it in the Script Collection artifact **SC_JAVAMapping_XX**. The resulting integration flow **CS_P2P_Sync_JAVA_XX** uses a Standard migration approach with SOAP sender and receiver adapters.
 
 > **Note:** We will not deploy this integration flow as part of this session. The purpose of this exercise was to demonstrate how Java Mappings are handled during migration — specifically the AI-assisted conversion to Groovy scripts.
 
