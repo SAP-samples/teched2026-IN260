@@ -46,17 +46,13 @@ After completing these steps you will have created a Script Collection artifact 
 
 1. Navigate to **Design > Integrations and APIs** and open your **User XX** integration package. The package currently contains 7 artifacts from the previous exercises. Select **Edit** to switch to edit mode.
 
-<br>![](/exercises/ex4/images/04_01_Prepare_01.png)
-
-2. The package is now in edit mode (**Mode: Editable**). Select **Edit** to confirm, then open the **Add** dropdown in the toolbar.
-
 <br>![](/exercises/ex4/images/04_01_Prepare_02.png)
 
-3. The **Add** dropdown lists the available artifact types. Select **Script Collection** from the list.
+2. The package is now in edit mode (**Mode: Editable**). Open the **Add** dropdown in the toolbar. The **Add** dropdown lists the available artifact types. Select **Script Collection** from the list.
 
 <br>![](/exercises/ex4/images/04_01_Prepare_03.png)
 
-4. The **Add Script Collection** dialog opens. Leave **Create** selected. Enter **SC_JAVAMapping_XX** as both **Name** and **ID** (replace **XX** with your user number). **Runtime Profile** is set to **Cloud Integration**. Select **Add** to create the artifact.
+3. The **Add Script Collection** dialog opens. Leave **Create** selected. Enter **SC_JAVAMapping_XX** as both **Name** and **ID** (replace **XX** with your user number). **Runtime Profile** is set to **Cloud Integration**. Select **Add** to create the artifact.
 
 <br>![](/exercises/ex4/images/04_01_Prepare_04.png)
 
@@ -106,17 +102,15 @@ After completing these steps you will have migrated the Java Mapping ICO using t
 
 <br>![](/exercises/ex4/images/04_02_Migrate_10.png)
 
-11. On step **7. Scenario Details**, the pre-populated fields show: **Name** and **ID** set to **CS_P2P_Sync_JAVA_XX**, **Runtime Profile: Cloud Integration**. Under **Inbound Processing**: **Sender Interface: siSendAttachment**, **Sender Component: BC_Sender**. Scroll down to review the Outbound Processing section.
+11. On step **7. Scenario Details**, the pre-populated fields show: **Name** and **ID** set to **CS_P2P_Sync_JAVA_XX**, **Runtime Profile: Cloud Integration**. Under **Inbound Processing**: **Sender Interface: siSendAttachment**, **Sender Component: BC_Sender**. Scroll down to review the Outbound Processing section. Replace **XX** in the **Name** and **ID** fields with your user number. The **Outbound Processing** section shows receiver **BC_Receiver** with interface **siCreateResponse** (namespace `http://demo.sap.com/soap/java`) — no condition.
 
 <br>![](/exercises/ex4/images/04_02_Migrate_11.png)
 
-Replace **XX** in the **Name** and **ID** fields with your user number. The **Outbound Processing** section shows receiver **BC_Receiver** with interface **siCreateResponse** (namespace `http://demo.sap.com/soap/java`) — no condition. Select **Review** to proceed.
-
-12. Step **8. Review** shows a full summary of all migration settings: **Process Orchestration System** (POP, Version 7.50), **Process Orchestration Artifacts** (ICO `|BC_Sender|siSendAttachment|http://demo.sap.com/soap/java||`), **Pattern** (Point-to-Point Synchronous, Standard approach), **Message Mapping from ESR** (mmResponse), and **Java Mapping from ESR** — with a note that Java mappings with Import Method **Create** will be converted to Groovy scripts with AI. Verify all settings.
+12. Select **Review** to proceed.
 
 <br>![](/exercises/ex4/images/04_02_Migrate_12.png)
 
-Select **Migrate** to start the migration.
+13. Step **8. Review** shows a full summary of all migration settings: **Process Orchestration System** (POP, Version 7.50), **Process Orchestration Artifacts** (ICO `|BC_Sender|siSendAttachment|http://demo.sap.com/soap/java||`), **Pattern** (Point-to-Point Synchronous, Standard approach), **Message Mapping from ESR** (mmResponse), and **Java Mapping from ESR** — with a note that Java mappings with Import Method **Create** will be converted to Groovy scripts with AI. Verify all settings. Select **Migrate** to start the migration.
 
 <br>![](/exercises/ex4/images/04_02_Migrate_13.png)
 
@@ -142,7 +136,7 @@ After completing these steps you will have reviewed the generated integration fl
 
 <br>![](/exercises/ex4/images/04_03_Result_04.png)
 
-5. Close the report. Back in the **User XX** package, the artifact list now shows **CS_P2P_Sync_JAVA_XX** (Integration Flow, version 1.0.0, Status: Created) and **Migration_JavaMapping** (Script Collection, version 1.0.0, Status: Created) — the AI-generated Groovy script is stored in the script collection. Select **CS_P2P_Sync_JAVA_XX** to open the integration flow.
+5. Close the report. Back in the **User XX** package, the artifact list now shows **CS_P2P_Sync_JAVA_XX** (Integration Flow, version 1.0.0, Status: Created) — the AI-generated Groovy script is stored in the script collection. Select **CS_P2P_Sync_JAVA_XX** to open the integration flow.
 
 <br>![](/exercises/ex4/images/04_03_Result_05.png)
 
