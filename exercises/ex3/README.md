@@ -92,7 +92,7 @@ After completing these steps you will have migrated the CBR Async ICO using the 
 
 <br>![](/exercises/ex3/images/03_01_Migrate_10.png)
 
-11. In the upcoming **Package Selection** dialog, select the **Migration Hands-on - Solution** package.
+11. [!NOTE] In the upcoming **Package Selection** dialog, select the **Migration Hands-on - Solution** package.
 
 <br>![](/exercises/ex3/images/03_01_Migrate_10a.png)
 
