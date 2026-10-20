@@ -26,7 +26,7 @@ We provide the following SAP Integration Suite tenants. The instructors will let
 - Option 2: Workshop tenant [**workshop01b**](https://url.sap/7wucsb)
 
 Access:
-- Use the user **userXX** with **XX** from 01 to 99.
+- Use the user **user0XX** with **XX** from 01 to 99.
 
 **Note**: Please replace **XX** with the ID assigned to you. The ID and the password will be provided by the instructors during the session.
 
