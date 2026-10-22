@@ -29,10 +29,12 @@ If you run the exercises on the laptops provided by us, the Bruno client has bee
 Import the provided collection if not already done.
 
 1. In the SAP Integration Suite landing page, navigate to **Design > Integrations and APIs**. Select the integration package **Migration Hands-on - Solution** and switch to tab **Documents**. From there you can download the Bruno collection.
->[!NOTE]
->The downloaded file is zipped, so you first need to unzip the file in your download folder before proceeding. The zip contains a **.yml** file.
 
 <br>![](/exercises/ex0/images/00_02_Bruno_00.png)
+
+>[!NOTE]
+>The downloaded file is zipped, so you first need to unzip the file in your download folder before proceeding. The zip contains a **.yml** file.
+<br>![](/exercises/ex0/images/00_02_Bruno_000.png)
 
 2. Open Bruno and select **Import Collection** either from the menu or from the home screen.
 
