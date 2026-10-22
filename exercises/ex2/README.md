@@ -53,10 +53,10 @@ Next, we launch the migration tool which guides us through the migration of the 
 
 <br>![](/exercises/ex2/images/SNAG-0011.png)
 
-7. In the next step, you can choose whether you like to work with reusable message mapping artifacts or not. 
+7. In the next step, you can choose whether you like to work with reusable message mapping artifacts or not. **Deselect** the **Enable Reusable Artifacts** flag. Then, click **Next Step**. 
   > [!NOTE]
-  > In this exercise, we like to use local mappings.<
-**Deselect** the **Enable Reusable Artifacts** flag. Then, click **Next Step**.
+  > In this exercise, we like to use local mappings.
+
 
 <br>![](/exercises/ex2/images/SNAG-0013.png)
 
