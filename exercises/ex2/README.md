@@ -55,8 +55,8 @@ Next, we launch the migration tool which guides us through the migration of the 
 
 7. In the next step, you can choose whether you like to work with reusable message mapping artifacts or not. 
   > [!NOTE]
-  > In this exercise, we like to use local mappings.
-   **Deselect** the **Enable Reusable Artifacts** flag. Then, click **Next Step**.
+  > In this exercise, we like to use local mappings.<
+**Deselect** the **Enable Reusable Artifacts** flag. Then, click **Next Step**.
 
 <br>![](/exercises/ex2/images/SNAG-0013.png)
 
